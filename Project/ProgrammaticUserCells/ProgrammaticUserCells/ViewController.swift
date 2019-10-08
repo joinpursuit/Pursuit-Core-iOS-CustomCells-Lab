@@ -4,22 +4,28 @@ class ViewController: UIViewController {
 
     var users = [User]() {
         didSet {
-            tableView.reloadData()
+            collectionView.reloadData()
         }
     }
     
-     lazy var tableView: UITableView = {
-            let usersTableView = UITableView()
-            usersTableView.dataSource = self
-            usersTableView.register(UserTableViewCell.self, forCellReuseIdentifier: "userCell")
+     lazy var collectionView: UICollectionView = {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: view.frame.width, height: 300)
+        
+        let userCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        
+        userCollectionView.dataSource = self
+        userCollectionView.register(UserCollectionViewCell.self, forCellWithReuseIdentifier: "userCell")
+        userCollectionView.showsVerticalScrollIndicator = false
+        userCollectionView.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
             
-            return usersTableView
+        return userCollectionView
         }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(tableView)
-        setConstraints()
+        self.view.addSubview(collectionView)
         loadData()
     }
     
@@ -36,31 +42,36 @@ class ViewController: UIViewController {
         }
     }
     
-    private func setConstraints() {
-        self.tableView.translatesAutoresizingMaskIntoConstraints = false
-        self.tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        self.tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-    }
 }
 
-extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension ViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return users.count
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "userCell", for: indexPath) as? UserCollectionViewCell else {return UICollectionViewCell()}
         
         let user = users[indexPath.row]
         
-        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as? UserTableViewCell else {return UITableViewCell()}
-        
         cell.nameLabel.text = user.name.first
+        
+        ImageHelper.shared.getImage(urlStr: user.picture.large) { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .failure(let error):
+                    print(error)
+                case .success(let imageFromOnline):
+                    cell.userImage.image = imageFromOnline
+                }
+            }
+        }
+        
+        cell.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
         
         return cell
     }
-    
-    
 }
+
 
