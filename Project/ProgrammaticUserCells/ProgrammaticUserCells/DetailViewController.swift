@@ -10,6 +10,13 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    var user: User!
+    
+    var userImage: UIImageView = {
+          let image = UIImageView()
+          return image
+      }()
+    
     var nameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -31,6 +38,9 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setSubviews()
+        addConstraints()
+        setLabels()
+        loadImage()
     }
     
     private func setSubviews() {
@@ -44,14 +54,29 @@ class DetailViewController: UIViewController {
     
     private func addConstraints() {
            
-//           NSLayoutConstraint.activate([
-//               greenModeSwitch.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-//               greenModeSwitch.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-//                  
-//              statusLabel.centerXAnchor.constraint(equalTo: greenModeSwitch.centerXAnchor),
-//              statusLabel.centerXAnchor.constraint(equalTo: greenModeSwitch.centerXAnchor),
-//              statusLabel.topAnchor.constraint(equalTo: greenModeSwitch.bottomAnchor, constant: 30)
-//           ])
-          
-       }
+           NSLayoutConstraint.activate([
+               userImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+               userImage.centerYAnchor.constraint(equalTo: self.view.topAnchor, constant: 50),
+              nameLabel.centerXAnchor.constraint(equalTo: userImage.centerXAnchor),
+              nameLabel.centerXAnchor.constraint(equalTo: userImage.centerXAnchor),
+              nameLabel.topAnchor.constraint(equalTo: userImage.bottomAnchor, constant: 30)
+           ])
+    }
+    
+    private func setLabels() {
+        nameLabel.text = user.name.first
+    }
+    
+    private func loadImage() {
+        ImageHelper.shared.getImage(urlStr: user.picture.large) { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let imagefromJSON):
+                    self.userImage.image = imagefromJSON
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
 }
