@@ -12,24 +12,24 @@ class DetailViewController: UIViewController {
     
     var user: User!
     
-    var userImage: UIImageView = {
+    lazy var userImage: UIImageView = {
           let image = UIImageView()
           return image
       }()
     
-    var nameLabel: UILabel = {
+    lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         return label
     }()
 
-    var emailLabel: UILabel = {
+    lazy var emailLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         return label
     }()
     
-    var cellLabel: UILabel = {
+    lazy var cellLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         return label
@@ -50,31 +50,46 @@ class DetailViewController: UIViewController {
         self.view.addSubview(emailLabel)
         cellLabel.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(cellLabel)
+        userImage.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(userImage)
     }
     
     private func addConstraints() {
            
-           NSLayoutConstraint.activate([
-               userImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-               userImage.centerYAnchor.constraint(equalTo: self.view.topAnchor, constant: 50),
-              nameLabel.centerXAnchor.constraint(equalTo: userImage.centerXAnchor),
-              nameLabel.centerXAnchor.constraint(equalTo: userImage.centerXAnchor),
-              nameLabel.topAnchor.constraint(equalTo: userImage.bottomAnchor, constant: 30)
-           ])
+        NSLayoutConstraint.activate([
+           userImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+           userImage.centerYAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
+           nameLabel.centerXAnchor.constraint(equalTo: userImage.centerXAnchor),
+           nameLabel.centerXAnchor.constraint(equalTo: userImage.centerXAnchor),
+           nameLabel.topAnchor.constraint(equalTo: userImage.bottomAnchor, constant: 30),
+           emailLabel.centerXAnchor.constraint(equalTo: nameLabel.centerXAnchor),
+           emailLabel.centerXAnchor.constraint(equalTo: nameLabel.centerXAnchor),
+           emailLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 30),
+           cellLabel.centerXAnchor.constraint(equalTo: emailLabel.centerXAnchor),
+           cellLabel.centerXAnchor.constraint(equalTo: emailLabel.centerXAnchor),
+           cellLabel.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 30),
+        ])
     }
     
     private func setLabels() {
-        nameLabel.text = user.name.first
+        DispatchQueue.main.async {
+            self.nameLabel.text = self.user.name.first
+            self.emailLabel.text = self.user.email
+            self.cellLabel.text = self.user.cell
+        }
+        
     }
     
     private func loadImage() {
-        ImageHelper.shared.getImage(urlStr: user.picture.large) { (result) in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let imagefromJSON):
-                    self.userImage.image = imagefromJSON
-                case .failure(let error):
-                    print(error)
+        DispatchQueue.main.async {
+            ImageHelper.shared.getImage(urlStr: self.user.picture.large) { (result) in
+                DispatchQueue.main.async {
+                     switch result {
+                                   case .success(let imagefromJSON):
+                                       self.userImage.image = imagefromJSON
+                                   case .failure(let error):
+                                       print(error)
+                                   }
                 }
             }
         }

@@ -10,15 +10,16 @@ class ViewController: UIViewController {
     
      lazy var collectionView: UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: view.frame.width, height: 300)
+        layout.sectionInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: 325, height: 300)
         
         let userCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         
         userCollectionView.dataSource = self
+        userCollectionView.delegate = self
         userCollectionView.register(UserCollectionViewCell.self, forCellWithReuseIdentifier: "userCell")
         userCollectionView.showsVerticalScrollIndicator = false
-        userCollectionView.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+        userCollectionView.backgroundColor = #colorLiteral(red: 0.3850156015, green: 0.8531414642, blue: 0.985880573, alpha: 0.6418999566)
             
         return userCollectionView
         }()
@@ -68,9 +69,19 @@ extension ViewController: UICollectionViewDataSource {
             }
         }
         
-        cell.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
+        cell.backgroundColor = #colorLiteral(red: 0.5485045887, green: 0.8194161367, blue: 0.8383918695, alpha: 1)
         
         return cell
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let currentUser = users[indexPath.row]
+        let detailVC  = DetailViewController()
+        detailVC.view.backgroundColor = #colorLiteral(red: 0.5485045887, green: 0.8194161367, blue: 0.8383918695, alpha: 1)
+        detailVC.user = currentUser
+        self.present(detailVC, animated: true, completion: nil)
     }
 }
 

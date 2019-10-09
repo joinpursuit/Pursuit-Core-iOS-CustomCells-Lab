@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B469F92D-2728-48FD-BEC7-F3DD986F65A9"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2AC134E4-FC35-420F-83EB-4EB0BB87EA79"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProgrammaticUserCells/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "setLabels()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D719B08-6D17-4048-A3D1-236717240D6A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProgrammaticUserCells/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "DetailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7D719B08-6D17-4048-A3D1-236717240D6A - ec3b540fc1e19886"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProgrammaticUserCells.DetailViewController.user.getter : Swift.Optional&lt;ProgrammaticUserCells.User&gt;"
+                  moduleName = "ProgrammaticUserCells"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michellecueva/Desktop/Labs/Programmatic_Cells_Lab/Project/ProgrammaticUserCells/ProgrammaticUserCells/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "923">
+               </Location>
+               <Location
+                  uuid = "7D719B08-6D17-4048-A3D1-236717240D6A - 70795eca5edd82a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProgrammaticUserCells.DetailViewController.user.setter : Swift.Optional&lt;ProgrammaticUserCells.User&gt;"
+                  moduleName = "ProgrammaticUserCells"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michellecueva/Desktop/Labs/Programmatic_Cells_Lab/Project/ProgrammaticUserCells/ProgrammaticUserCells/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "1057">
+               </Location>
+               <Location
+                  uuid = "7D719B08-6D17-4048-A3D1-236717240D6A - faf32d86c85818ad"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProgrammaticUserCells.DetailViewController.user.modify : Swift.Optional&lt;ProgrammaticUserCells.User&gt;"
+                  moduleName = "ProgrammaticUserCells"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michellecueva/Desktop/Labs/Programmatic_Cells_Lab/Project/ProgrammaticUserCells/ProgrammaticUserCells/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "7D719B08-6D17-4048-A3D1-236717240D6A - c8bc55ccd524759"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProgrammaticUserCells.DetailViewController.user.modify : Swift.Optional&lt;ProgrammaticUserCells.User&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "ProgrammaticUserCells"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michellecueva/Desktop/Labs/Programmatic_Cells_Lab/Project/ProgrammaticUserCells/ProgrammaticUserCells/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "7D719B08-6D17-4048-A3D1-236717240D6A - 4feb2e4207a88985"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProgrammaticUserCells.DetailViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ProgrammaticUserCells.DetailViewController"
+                  moduleName = "ProgrammaticUserCells"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michellecueva/Desktop/Labs/Programmatic_Cells_Lab/Project/ProgrammaticUserCells/ProgrammaticUserCells/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "182">
+               </Location>
+               <Location
+                  uuid = "7D719B08-6D17-4048-A3D1-236717240D6A - d953a508504ef17f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProgrammaticUserCells.DetailViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ProgrammaticUserCells.DetailViewController&gt;"
+                  moduleName = "ProgrammaticUserCells"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michellecueva/Desktop/Labs/Programmatic_Cells_Lab/Project/ProgrammaticUserCells/ProgrammaticUserCells/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "119">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11F84299-0783-4CCB-9FD9-8621856017C7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProgrammaticUserCells/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "setLabels()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

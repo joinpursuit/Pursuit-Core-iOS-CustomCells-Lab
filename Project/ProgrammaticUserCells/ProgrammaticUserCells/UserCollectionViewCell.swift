@@ -21,6 +21,7 @@ class UserCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.layer.cornerRadius = 35
         addViews()
         configureConstraints()
     }
