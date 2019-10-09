@@ -59,6 +59,8 @@ class DetailViewController: UIViewController {
         NSLayoutConstraint.activate([
            userImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
            userImage.centerYAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
+           userImage.widthAnchor.constraint(equalToConstant: 250),
+           userImage.heightAnchor.constraint(equalToConstant: 250),
            nameLabel.centerXAnchor.constraint(equalTo: userImage.centerXAnchor),
            nameLabel.centerXAnchor.constraint(equalTo: userImage.centerXAnchor),
            nameLabel.topAnchor.constraint(equalTo: userImage.bottomAnchor, constant: 30),
@@ -69,6 +71,9 @@ class DetailViewController: UIViewController {
            cellLabel.centerXAnchor.constraint(equalTo: emailLabel.centerXAnchor),
            cellLabel.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 30),
         ])
+        
+            userImage.contentMode = .scaleAspectFit
+
     }
     
     private func setLabels() {

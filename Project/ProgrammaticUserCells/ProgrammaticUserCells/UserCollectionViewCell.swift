@@ -37,14 +37,17 @@ class UserCollectionViewCell: UICollectionViewCell {
     private func configureConstraints() {
         userImage.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        userImage.contentMode = .scaleAspectFit
         
         NSLayoutConstraint.activate([
            userImage.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor),
            userImage.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor),
-               
+               userImage.widthAnchor.constraint(equalToConstant: 225),
+               userImage.heightAnchor.constraint(equalToConstant: 225),
+
            nameLabel.centerXAnchor.constraint(equalTo: userImage.centerXAnchor),
            nameLabel.centerXAnchor.constraint(equalTo: userImage.centerXAnchor),
-           nameLabel.topAnchor.constraint(equalTo: userImage.bottomAnchor, constant: 30)
+           nameLabel.topAnchor.constraint(equalTo: userImage.bottomAnchor, constant: 10)
         ])
     }
     
