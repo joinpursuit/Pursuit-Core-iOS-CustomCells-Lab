@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in variable initialization expression of DetailViewController.userImage:DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "image.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailViewController.setLabels():DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "user">
+            </PersistentString>
+            <PersistentString
+               value = "user.name.first">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.collectionView(_:didSelectItemAt:):ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DetailViewController.init(nibName:bundle:):DetailViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
