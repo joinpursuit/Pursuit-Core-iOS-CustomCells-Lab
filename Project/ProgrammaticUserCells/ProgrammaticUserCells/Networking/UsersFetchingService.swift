@@ -26,4 +26,5 @@ class UsersFetchingService {
     private let usersEndpoint = "https://randomuser.me/api/?results=500"
 
     private init() {}
+    
 }

@@ -29,6 +29,11 @@ struct Name: Codable {
     let title: String
     let first: String
     let last: String
+    var fullName: String {
+        get {
+            return "\(title). \(first) \(last)"
+        }
+    }
 }
 
 struct Location: Codable {
@@ -36,6 +41,11 @@ struct Location: Codable {
     let city: String
     let state: String
     let postcode: String
+    var fullAddress: String {
+        get {
+            return "\(street.number) \(street.name) \(city) \(state) \(postcode) "
+        }
+    }
     
     enum CodingKeys: String, CodingKey {
         case street, city, state, postcode
@@ -71,3 +81,6 @@ struct UserImageInfo: Codable {
     let medium: String
     let thumbnail: String
 }
+
+
+

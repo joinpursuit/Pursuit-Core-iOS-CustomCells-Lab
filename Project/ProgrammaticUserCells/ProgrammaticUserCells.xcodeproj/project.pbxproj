@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B05B53A2357A8BC001D2E03 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05B5392357A8BC001D2E03 /* DetailViewController.swift */; };
 		CDA0F5CE2348F74900B2E7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */; };
 		CDA0F5D02348F74900B2E7F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */; };
 		CDA0F5D22348F74900B2E7F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5D12348F74900B2E7F0 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B05B5392357A8BC001D2E03 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CDA0F5CA2348F74900B2E7F0 /* ProgrammaticUserCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgrammaticUserCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */,
 				CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */,
 				CDA0F5D12348F74900B2E7F0 /* ViewController.swift */,
+				0B05B5392357A8BC001D2E03 /* DetailViewController.swift */,
 				CDA0F5EF2348F7E300B2E7F0 /* User.swift */,
 				CDA0F5D62348F74F00B2E7F0 /* Assets.xcassets */,
 				CDA0F5D82348F74F00B2E7F0 /* LaunchScreen.storyboard */,
@@ -229,6 +232,7 @@
 				CDA0F5F92348FEB800B2E7F0 /* UsersFetchingService.swift in Sources */,
 				CDA0F5F72348FE9600B2E7F0 /* NetworkHelper.swift in Sources */,
 				CDA0F5D02348F74900B2E7F0 /* SceneDelegate.swift in Sources */,
+				0B05B53A2357A8BC001D2E03 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
