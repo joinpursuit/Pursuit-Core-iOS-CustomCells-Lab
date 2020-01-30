@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F5032F123E3872D000E50CD /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F5032F023E3872D000E50CD /* UserCell.xib */; };
+		0F5032F323E3885B000E50CD /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5032F223E3885B000E50CD /* UserCell.swift */; };
 		CDA0F5CE2348F74900B2E7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */; };
 		CDA0F5D02348F74900B2E7F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */; };
 		CDA0F5D22348F74900B2E7F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5D12348F74900B2E7F0 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F5032F023E3872D000E50CD /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		0F5032F223E3885B000E50CD /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		CDA0F5CA2348F74900B2E7F0 /* ProgrammaticUserCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgrammaticUserCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */,
 				CDA0F5D12348F74900B2E7F0 /* ViewController.swift */,
 				CDA0F5EF2348F7E300B2E7F0 /* User.swift */,
+				0F5032F223E3885B000E50CD /* UserCell.swift */,
+				0F5032F023E3872D000E50CD /* UserCell.xib */,
 				CDA0F5D62348F74F00B2E7F0 /* Assets.xcassets */,
 				CDA0F5D82348F74F00B2E7F0 /* LaunchScreen.storyboard */,
 				CDA0F5DB2348F74F00B2E7F0 /* Info.plist */,
@@ -201,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F5032F123E3872D000E50CD /* UserCell.xib in Resources */,
 				CDA0F5F32348FB8200B2E7F0 /* randomUserSampleResponse.json in Resources */,
 				CDA0F5DA2348F74F00B2E7F0 /* LaunchScreen.storyboard in Resources */,
 				CDA0F5D72348F74F00B2E7F0 /* Assets.xcassets in Resources */,
@@ -224,6 +231,7 @@
 			files = (
 				CDA0F5F02348F7E300B2E7F0 /* User.swift in Sources */,
 				CDA0F5D22348F74900B2E7F0 /* ViewController.swift in Sources */,
+				0F5032F323E3885B000E50CD /* UserCell.swift in Sources */,
 				CDA0F5F52348FE8800B2E7F0 /* AppError.swift in Sources */,
 				CDA0F5CE2348F74900B2E7F0 /* AppDelegate.swift in Sources */,
 				CDA0F5F92348FEB800B2E7F0 /* UsersFetchingService.swift in Sources */,
