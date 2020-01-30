@@ -7,9 +7,23 @@
 //
 
 import UIKit
+import ImageKit
 
 class UserCell: UICollectionViewCell {
     
+    func configureCell(user: User) {
+        userImage.getImage(with: user.picture.large) { [weak self] (result) in
+            switch result {
+            case .failure(let appError):
+                print("error fetching image \(appError)")
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self?.userImage.image = image
+                }
+            }
+        }
+        userNameLabel.text = "\(user.name.first) \(user.name.last)"
+    }
 //
     public lazy var userImage: UIImageView = {
         let image = UIImageView()
@@ -19,9 +33,13 @@ class UserCell: UICollectionViewCell {
         return image
     }()
     
-    public lazy var userName: UILabel = {
+    public lazy var userNameLabel: UILabel = {
         let label = UILabel()
-        label.backgroundColor = .black
+        label.backgroundColor = .green
+        label.text = "TEST"
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.font = label.font.withSize(20)
         return label
     }()
     
@@ -37,6 +55,7 @@ class UserCell: UICollectionViewCell {
     
     private func commonInit() {
      setUpImageViewConstraints()
+        setUpNameLabelConstraunts()
     }
     
     private func setUpImageViewConstraints() {
@@ -47,6 +66,17 @@ class UserCell: UICollectionViewCell {
             userImage.leadingAnchor.constraint(equalTo: leadingAnchor),
             userImage.bottomAnchor.constraint(equalTo: bottomAnchor),
             userImage.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5)
+        ])
+    }
+    
+    private func setUpNameLabelConstraunts() {
+        addSubview(userNameLabel)
+        userNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            userNameLabel.leadingAnchor.constraint(equalTo: userImage.trailingAnchor, constant: 20),
+            userNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+           // userNameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            userNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 40)
         ])
     }
 }
