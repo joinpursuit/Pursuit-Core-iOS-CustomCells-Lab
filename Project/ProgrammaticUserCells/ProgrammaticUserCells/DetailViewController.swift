@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = detailView
+        detailView.backgroundColor = .systemBackground
     }
 
     override func viewDidLoad() {
@@ -41,6 +42,9 @@ class DetailViewController: UIViewController {
                 }
             }
         }
+        detailView.userNameLabel.text = validUser.name.title + " " + validUser.name.first + " " + validUser.name.last
+        detailView.userLocationLabel.text = "\(validUser.location.street.number)" + " " +  "\(validUser.location.street.name)" + " \(validUser.location.city), \(validUser.location.state) \(validUser.location.postcode)"
+        detailView.userContactLabel.text = "Cell: \(validUser.cell)\nEmail: \(validUser.email)\nPhone: \(validUser.phone)"
     }
     
 

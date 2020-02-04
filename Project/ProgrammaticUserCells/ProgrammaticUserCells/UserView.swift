@@ -16,31 +16,37 @@ class UserView: UIView {
     
     public lazy var userNameLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         return label
     }()
     
     public lazy var userLocationLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         return label
     }()
     
     public lazy var userContactLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         return label
     }()
         
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
+        commonInit()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        commonInit()
     }
     
     private func commonInit(){
         setUpUserImageViewConstrainsts()
         setUpUserNameConstrainsts()
         setUpUserLocationConstrainsts()
+        setUpContactLabelConstrainsts()
     }
     
     private func setUpUserImageViewConstrainsts(){
@@ -49,8 +55,8 @@ class UserView: UIView {
         NSLayoutConstraint.activate([
             userImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 8),
             userImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.4),
-            userImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            userImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 8)
+            userImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            userImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
     }
     
@@ -60,8 +66,8 @@ class UserView: UIView {
         NSLayoutConstraint.activate([
             userNameLabel.topAnchor.constraint(equalTo: userImageView.bottomAnchor, constant: 8),
             userNameLabel.centerXAnchor.constraint(equalTo: userImageView.centerXAnchor),
-            userNameLabel.leadingAnchor.constraint(equalTo: userImageView.leadingAnchor),
-            userNameLabel.trailingAnchor.constraint(equalTo: userImageView.trailingAnchor)
+            userNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            userNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
     }
     private func setUpUserLocationConstrainsts(){
@@ -69,18 +75,18 @@ class UserView: UIView {
         userLocationLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             userLocationLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 8),
-            userLocationLabel.leadingAnchor.constraint(equalTo: userLocationLabel.leadingAnchor),
-            userLocationLabel.trailingAnchor.constraint(equalTo: userNameLabel.trailingAnchor)
+            userLocationLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            userLocationLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 20)
         ])
     }
     
-    private func setUpContactLabel(){
+    private func setUpContactLabelConstrainsts(){
         addSubview(userContactLabel)
         userContactLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             userContactLabel.topAnchor.constraint(equalTo: userLocationLabel.bottomAnchor, constant: 8),
-            userContactLabel.leadingAnchor.constraint(equalTo: userLocationLabel.leadingAnchor),
-            userContactLabel.trailingAnchor.constraint(equalTo: userLocationLabel.trailingAnchor)
+            userContactLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            userContactLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 20)
         ])
     }
 

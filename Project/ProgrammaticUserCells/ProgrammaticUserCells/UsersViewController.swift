@@ -22,10 +22,6 @@ class UsersViewController: UIViewController {
         dataSourcesAndDelegates()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-    
     func loadUsers(){
         UsersFetchingService.manager.getUsers { [weak self](result) in
             switch result{
