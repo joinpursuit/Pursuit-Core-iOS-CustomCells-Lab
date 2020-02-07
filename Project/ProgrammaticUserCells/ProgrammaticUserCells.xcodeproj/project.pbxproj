@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BDC529B23EE141C00BA696E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC529A23EE141C00BA696E /* DetailViewController.swift */; };
+		0BDC529E23EE15CC00BA696E /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0BDC529D23EE15CC00BA696E /* ImageKit */; };
+		0BFF40BB23EDE90800E94B5F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFF40BA23EDE90800E94B5F /* CustomTableViewCell.swift */; };
 		CDA0F5CE2348F74900B2E7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */; };
 		CDA0F5D02348F74900B2E7F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */; };
 		CDA0F5D22348F74900B2E7F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5D12348F74900B2E7F0 /* ViewController.swift */; };
@@ -32,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BDC529A23EE141C00BA696E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0BFF40BA23EDE90800E94B5F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CDA0F5CA2348F74900B2E7F0 /* ProgrammaticUserCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgrammaticUserCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BDC529E23EE15CC00BA696E /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +99,8 @@
 				CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */,
 				CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */,
 				CDA0F5D12348F74900B2E7F0 /* ViewController.swift */,
+				0BDC529A23EE141C00BA696E /* DetailViewController.swift */,
+				0BFF40BA23EDE90800E94B5F /* CustomTableViewCell.swift */,
 				CDA0F5EF2348F7E300B2E7F0 /* User.swift */,
 				CDA0F5D62348F74F00B2E7F0 /* Assets.xcassets */,
 				CDA0F5D82348F74F00B2E7F0 /* LaunchScreen.storyboard */,
@@ -136,6 +144,9 @@
 			dependencies = (
 			);
 			name = ProgrammaticUserCells;
+			packageProductDependencies = (
+				0BDC529D23EE15CC00BA696E /* ImageKit */,
+			);
 			productName = ProgrammaticUserCells;
 			productReference = CDA0F5CA2348F74900B2E7F0 /* ProgrammaticUserCells.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +197,9 @@
 				Base,
 			);
 			mainGroup = CDA0F5C12348F74900B2E7F0;
+			packageReferences = (
+				0BDC529C23EE15CC00BA696E /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = CDA0F5CB2348F74900B2E7F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,8 +236,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BDC529B23EE141C00BA696E /* DetailViewController.swift in Sources */,
 				CDA0F5F02348F7E300B2E7F0 /* User.swift in Sources */,
 				CDA0F5D22348F74900B2E7F0 /* ViewController.swift in Sources */,
+				0BFF40BB23EDE90800E94B5F /* CustomTableViewCell.swift in Sources */,
 				CDA0F5F52348FE8800B2E7F0 /* AppError.swift in Sources */,
 				CDA0F5CE2348F74900B2E7F0 /* AppDelegate.swift in Sources */,
 				CDA0F5F92348FEB800B2E7F0 /* UsersFetchingService.swift in Sources */,
@@ -487,6 +503,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0BDC529C23EE15CC00BA696E /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0BDC529D23EE15CC00BA696E /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BDC529C23EE15CC00BA696E /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CDA0F5C22348F74900B2E7F0 /* Project object */;
 }
