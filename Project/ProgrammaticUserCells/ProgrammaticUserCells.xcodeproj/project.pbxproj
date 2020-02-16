@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4E932923F99CE7002C30F7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E932823F99CE7002C30F7 /* DetailViewController.swift */; };
+		0F4E932B23F99D07002C30F7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E932A23F99D07002C30F7 /* DetailView.swift */; };
 		0F5032F123E3872D000E50CD /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F5032F023E3872D000E50CD /* UserCell.xib */; };
 		0F5032F323E3885B000E50CD /* UsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5032F223E3885B000E50CD /* UsersCell.swift */; };
 		0F5032F523E47C71000E50CD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5032F423E47C71000E50CD /* MainView.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F4E932823F99CE7002C30F7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0F4E932A23F99D07002C30F7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		0F5032F023E3872D000E50CD /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		0F5032F223E3885B000E50CD /* UsersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCell.swift; sourceTree = "<group>"; };
 		0F5032F423E47C71000E50CD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -98,8 +102,10 @@
 				CDA0F5FA2349003E00B2E7F0 /* Networking */,
 				CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */,
 				CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */,
-				0F5032F423E47C71000E50CD /* MainView.swift */,
 				CDA0F5D12348F74900B2E7F0 /* MainViewController.swift */,
+				0F5032F423E47C71000E50CD /* MainView.swift */,
+				0F4E932823F99CE7002C30F7 /* DetailViewController.swift */,
+				0F4E932A23F99D07002C30F7 /* DetailView.swift */,
 				CDA0F5EF2348F7E300B2E7F0 /* User.swift */,
 				0F5032F223E3885B000E50CD /* UsersCell.swift */,
 				0F5032F023E3872D000E50CD /* UserCell.xib */,
@@ -237,8 +243,10 @@
 				CDA0F5D22348F74900B2E7F0 /* MainViewController.swift in Sources */,
 				0F5032F323E3885B000E50CD /* UsersCell.swift in Sources */,
 				CDA0F5F52348FE8800B2E7F0 /* AppError.swift in Sources */,
+				0F4E932B23F99D07002C30F7 /* DetailView.swift in Sources */,
 				CDA0F5CE2348F74900B2E7F0 /* AppDelegate.swift in Sources */,
 				CDA0F5F92348FEB800B2E7F0 /* UsersFetchingService.swift in Sources */,
+				0F4E932923F99CE7002C30F7 /* DetailViewController.swift in Sources */,
 				CDA0F5F72348FE9600B2E7F0 /* NetworkHelper.swift in Sources */,
 				CDA0F5D02348F74900B2E7F0 /* SceneDelegate.swift in Sources */,
 			);
