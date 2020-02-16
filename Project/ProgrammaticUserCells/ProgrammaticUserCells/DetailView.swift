@@ -92,10 +92,10 @@ class DetailView: UIView {
         addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+        imageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.heightAnchor.constraint(equalTo: heightAnchor, constant: 200)
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor), imageView.heightAnchor.constraint(equalTo: heightAnchor, constraint: 100)
         ])
     }
     

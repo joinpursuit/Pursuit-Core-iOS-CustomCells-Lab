@@ -28,8 +28,14 @@ class MainViewController: UIViewController {
         
         //FIXME:
         //fetchUsers()
+       // loadData()
         
     }
+    
+//    func loadData() {
+//        users = User.getUsers()
+//    }
+    
     //FIXME:
     //    private func fetchUsers() {
     //UsersFetchingService.getUsers() { (result) in
@@ -46,7 +52,8 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return users.count
+        //FIXME: users.count
+        return 12
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -55,7 +62,7 @@ extension MainViewController: UICollectionViewDataSource {
                 fatalError("could not downcast to UsersCell")
         }
         //FIXME?
-        cell.backgroundColor = .blue
+        cell.backgroundColor = .red
         return cell
     }
 }
@@ -67,7 +74,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: itemWidth, height: 120)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let user = users[indexPath.row]
+       // let user = users[indexPath.row]
         //FIXME: SEGUE to detail VC:
         let detailVC = DetailViewController()
         detailVC.user = users

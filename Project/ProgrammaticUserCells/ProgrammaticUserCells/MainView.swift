@@ -13,7 +13,7 @@ class MainView: UIView {
     public lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: 400, height: 200)
+        layout.itemSize = CGSize(width: 400, height: 500)
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         cv.backgroundColor = .systemTeal
         return cv
