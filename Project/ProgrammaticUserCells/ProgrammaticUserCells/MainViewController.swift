@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGreen
+        view.backgroundColor = .systemBackground
         navigationItem.title = "Random Users"
         
         mainView.collectionView.dataSource = self
@@ -26,34 +26,25 @@ class MainViewController: UIViewController {
         
         mainView.collectionView.register(UINib(nibName: "UsersCell", bundle: nil), forCellWithReuseIdentifier: "usersCell")
         
-        //FIXME:
-        //fetchUsers()
-       // loadData()
+        fetchUsers()
         
     }
     
-//    func loadData() {
-//        users = User.getUsers()
-//    }
-    
-    //FIXME:
-    //    private func fetchUsers() {
-    //UsersFetchingService.getUsers() { (result) in
-    //            switch result {
-    //            case .failure(let appError):
-    //                print("error fetching users \(appError)")
-    //            case .success(let users):
-    //                self.users = users
-    //            }
-    //
-    //        }
-    //    }
+    private func fetchUsers() {
+        UsersFetchingService.manager.getUsers { (result) in
+            switch result {
+            case .failure(let appError):
+                print("error fetching users \(appError)")
+            case .success(let users):
+                self.users = users
+            }
+        }
+    }
 }
 
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //FIXME: users.count
-        return 12
+        return users.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -61,8 +52,9 @@ extension MainViewController: UICollectionViewDataSource {
             UsersCell else {
                 fatalError("could not downcast to UsersCell")
         }
-        //FIXME?
+        let user = users[indexPath.row]
         cell.backgroundColor = .red
+        cell.configureCell(for: user)
         return cell
     }
 }
@@ -74,10 +66,10 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: itemWidth, height: 120)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       // let user = users[indexPath.row]
+        let user = users[indexPath.row]
         //FIXME: SEGUE to detail VC:
         let detailVC = DetailViewController()
-        detailVC.user = users
+        detailVC.user = user
         
         navigationController?.pushViewController(detailVC, animated: true)
     }

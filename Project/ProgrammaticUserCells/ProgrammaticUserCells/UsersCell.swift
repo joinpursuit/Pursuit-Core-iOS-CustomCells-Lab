@@ -13,4 +13,8 @@ class UsersCell: UICollectionViewCell {
     
     @IBOutlet weak var userNameLabel: UILabel!
     
+    public func configureCell(for user: User) {
+        userNameLabel.text = user.name.first + " " + user.name.last
+    }
+    
 }
