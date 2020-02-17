@@ -39,6 +39,17 @@ class DetailViewController: UIViewController {
         detailView.address2Label.text = currentUser.location.city + ", " + currentUser.location.state + ", " + currentUser.location.postcode
         
         detailView.emailLabel.text = "Email: \(currentUser.email)"
+        
+        detailView.imageView.getImage(with: currentUser.picture.large) {[weak self] (result) in
+            switch result {
+            case .failure(let error):
+                print("error get user image \(error)")
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self?.detailView.imageView.image = image
+                }
+            }
+        }
     }
 }
 
