@@ -30,10 +30,15 @@ class DetailViewController: UIViewController {
         guard let currentUser = user else {
             fatalError("could not load adat for user")
         }
-        detailView.nameLabel.text = currentUser.name.title + " " + currentUser.name.first + " " + currentUser.name.last
-        detailView.addressLabel.text = String(user?.location.street.number ?? 0)
+        detailView.nameLabel.text = currentUser.name.title + ". " + currentUser.name.first + " " + currentUser.name.last
         
-        detailView.emailLabel.text = currentUser.email
+        detailView.ageLabel.text = "Age: \(String(currentUser.dob.age))"
+        
+        detailView.address1Label.text = "Address:  \(String(currentUser.location.street.number)), \(currentUser.location.street.name)"
+        
+        detailView.address2Label.text = currentUser.location.city + ", " + currentUser.location.state + ", " + currentUser.location.postcode
+        
+        detailView.emailLabel.text = "Email: \(currentUser.email)"
     }
 }
 

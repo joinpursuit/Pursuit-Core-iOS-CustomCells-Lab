@@ -30,46 +30,46 @@ class DetailView: UIView {
         return label
     }()
     
-    public lazy var addressLabel: UILabel = {
+    public lazy var ageLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.numberOfLines = 2
+        label.numberOfLines = 1
         label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         //FIXME: add address
-        label.text = "addressLabel"
+        label.text = "ageLabel"
+        label.backgroundColor = .white
+        return label
+    }()
+    
+    public lazy var address1Label: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.numberOfLines = 1
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        //FIXME: add email from API
+        label.text = "address1Label"
+        label.backgroundColor = .white
+        return label
+    }()
+    
+    public lazy var address2Label: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.numberOfLines = 1
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        //FIXME: add userName from API
+        label.text = "address2Label"
         label.backgroundColor = .white
         return label
     }()
     
     public lazy var emailLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .left
-        label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        //FIXME: add email from API
-        label.text = "emailLabel"
-        label.backgroundColor = .white
-        return label
-    }()
-    
-    public lazy var usernameLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .left
-        label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        //FIXME: add userName from API
-        label.text = "usernameLabel"
-        label.backgroundColor = .white
-        return label
-    }()
-    
-    public lazy var passwordLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .left
+        label.textAlignment = .center
         label.numberOfLines = 1
         label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         //FIXME: add password from API
-        label.text = "passwordLabel"
+        label.text = "emailLabel"
         label.backgroundColor = .white
         return label
     }()
@@ -115,42 +115,42 @@ class DetailView: UIView {
     }
     
     private func setupAddressLabelConstraints() {
-        addSubview(addressLabel)
-        addressLabel.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(ageLabel)
+        ageLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            addressLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 20),
-            addressLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            addressLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
+            ageLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 20),
+            ageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            ageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
         ])
     }
     
     private func setupEmailLabelConstraints() {
-        addSubview(emailLabel)
-        emailLabel.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(address1Label)
+        address1Label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            emailLabel.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 20),
-            emailLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            emailLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
+            address1Label.topAnchor.constraint(equalTo: ageLabel.bottomAnchor, constant: 20),
+            address1Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            address1Label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
         ])
     }
     
     private func setupUsernameLabelConstraints() {
-        addSubview(usernameLabel)
-        usernameLabel.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(address2Label)
+        address2Label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            usernameLabel.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 20),
-            usernameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            usernameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
+            address2Label.topAnchor.constraint(equalTo: address1Label.bottomAnchor, constant: 20),
+            address2Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            address2Label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
         ])
     }
     
     private func setupPasswordLabelConstraints() {
-        addSubview(passwordLabel)
-        passwordLabel.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(emailLabel)
+        emailLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            passwordLabel.topAnchor.constraint(equalTo: usernameLabel.bottomAnchor, constant: 20),
-            passwordLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            passwordLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
+            emailLabel.topAnchor.constraint(equalTo: address2Label.bottomAnchor, constant: 20),
+            emailLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            emailLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
         ])
     }
 }
