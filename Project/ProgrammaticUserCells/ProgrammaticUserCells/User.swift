@@ -13,7 +13,7 @@ struct User: Codable {
     let phone: String
     let cell: String
     let picture: UserImageInfo
-    
+
     static func getUsers(from jsonData: Data) -> [User] {
         do {
             let resultsWrapper = try JSONDecoder().decode(ResultsWrapper.self, from: jsonData)
@@ -36,13 +36,13 @@ struct Location: Codable {
     let city: String
     let state: String
     let postcode: String
-    
+
     enum CodingKeys: String, CodingKey {
         case street, city, state, postcode
     }
-    
-    //https://stackoverflow.com/questions/47935705/using-codable-with-key-that-is-sometimes-an-int-and-other-times-a-string
-    
+
+    //var https://stackoverflow.com/questions/47935705/using-codable-with-key-that-is-sometimes-an-int-and-other-times-a-string
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         street = try container.decode(Street.self, forKey: .street)

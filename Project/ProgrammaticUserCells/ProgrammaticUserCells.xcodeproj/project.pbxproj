@@ -3,13 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4E932923F99CE7002C30F7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E932823F99CE7002C30F7 /* DetailViewController.swift */; };
+		0F4E932B23F99D07002C30F7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E932A23F99D07002C30F7 /* DetailView.swift */; };
+		0F4E933023FAE3AB002C30F7 /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F4E932F23FAE3AB002C30F7 /* ImageKit */; };
+		0F5032F123E3872D000E50CD /* UsersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F5032F023E3872D000E50CD /* UsersCell.xib */; };
+		0F5032F323E3885B000E50CD /* UsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5032F223E3885B000E50CD /* UsersCell.swift */; };
+		0F5032F523E47C71000E50CD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5032F423E47C71000E50CD /* MainView.swift */; };
 		CDA0F5CE2348F74900B2E7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */; };
 		CDA0F5D02348F74900B2E7F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */; };
-		CDA0F5D22348F74900B2E7F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5D12348F74900B2E7F0 /* ViewController.swift */; };
+		CDA0F5D22348F74900B2E7F0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5D12348F74900B2E7F0 /* MainViewController.swift */; };
 		CDA0F5D72348F74F00B2E7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA0F5D62348F74F00B2E7F0 /* Assets.xcassets */; };
 		CDA0F5DA2348F74F00B2E7F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA0F5D82348F74F00B2E7F0 /* LaunchScreen.storyboard */; };
 		CDA0F5E52348F74F00B2E7F0 /* ProgrammaticUserCellsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5E42348F74F00B2E7F0 /* ProgrammaticUserCellsTests.swift */; };
@@ -32,10 +38,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F4E932823F99CE7002C30F7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0F4E932A23F99D07002C30F7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		0F5032F023E3872D000E50CD /* UsersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersCell.xib; sourceTree = "<group>"; };
+		0F5032F223E3885B000E50CD /* UsersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCell.swift; sourceTree = "<group>"; };
+		0F5032F423E47C71000E50CD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CDA0F5CA2348F74900B2E7F0 /* ProgrammaticUserCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgrammaticUserCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CDA0F5D12348F74900B2E7F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDA0F5D12348F74900B2E7F0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CDA0F5D62348F74F00B2E7F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDA0F5D92348F74F00B2E7F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDA0F5DB2348F74F00B2E7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F4E933023FAE3AB002C30F7 /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +104,13 @@
 				CDA0F5FA2349003E00B2E7F0 /* Networking */,
 				CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */,
 				CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */,
-				CDA0F5D12348F74900B2E7F0 /* ViewController.swift */,
+				CDA0F5D12348F74900B2E7F0 /* MainViewController.swift */,
+				0F5032F423E47C71000E50CD /* MainView.swift */,
+				0F4E932823F99CE7002C30F7 /* DetailViewController.swift */,
+				0F4E932A23F99D07002C30F7 /* DetailView.swift */,
 				CDA0F5EF2348F7E300B2E7F0 /* User.swift */,
+				0F5032F223E3885B000E50CD /* UsersCell.swift */,
+				0F5032F023E3872D000E50CD /* UsersCell.xib */,
 				CDA0F5D62348F74F00B2E7F0 /* Assets.xcassets */,
 				CDA0F5D82348F74F00B2E7F0 /* LaunchScreen.storyboard */,
 				CDA0F5DB2348F74F00B2E7F0 /* Info.plist */,
@@ -136,6 +153,9 @@
 			dependencies = (
 			);
 			name = ProgrammaticUserCells;
+			packageProductDependencies = (
+				0F4E932F23FAE3AB002C30F7 /* ImageKit */,
+			);
 			productName = ProgrammaticUserCells;
 			productReference = CDA0F5CA2348F74900B2E7F0 /* ProgrammaticUserCells.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +206,9 @@
 				Base,
 			);
 			mainGroup = CDA0F5C12348F74900B2E7F0;
+			packageReferences = (
+				0F4E932E23FAE3AB002C30F7 /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = CDA0F5CB2348F74900B2E7F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -201,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F5032F123E3872D000E50CD /* UsersCell.xib in Resources */,
 				CDA0F5F32348FB8200B2E7F0 /* randomUserSampleResponse.json in Resources */,
 				CDA0F5DA2348F74F00B2E7F0 /* LaunchScreen.storyboard in Resources */,
 				CDA0F5D72348F74F00B2E7F0 /* Assets.xcassets in Resources */,
@@ -223,10 +247,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDA0F5F02348F7E300B2E7F0 /* User.swift in Sources */,
-				CDA0F5D22348F74900B2E7F0 /* ViewController.swift in Sources */,
+				0F5032F523E47C71000E50CD /* MainView.swift in Sources */,
+				CDA0F5D22348F74900B2E7F0 /* MainViewController.swift in Sources */,
+				0F5032F323E3885B000E50CD /* UsersCell.swift in Sources */,
 				CDA0F5F52348FE8800B2E7F0 /* AppError.swift in Sources */,
+				0F4E932B23F99D07002C30F7 /* DetailView.swift in Sources */,
 				CDA0F5CE2348F74900B2E7F0 /* AppDelegate.swift in Sources */,
 				CDA0F5F92348FEB800B2E7F0 /* UsersFetchingService.swift in Sources */,
+				0F4E932923F99CE7002C30F7 /* DetailViewController.swift in Sources */,
 				CDA0F5F72348FE9600B2E7F0 /* NetworkHelper.swift in Sources */,
 				CDA0F5D02348F74900B2E7F0 /* SceneDelegate.swift in Sources */,
 			);
@@ -487,6 +515,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0F4E932E23FAE3AB002C30F7 /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0F4E932F23FAE3AB002C30F7 /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F4E932E23FAE3AB002C30F7 /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CDA0F5C22348F74900B2E7F0 /* Project object */;
 }

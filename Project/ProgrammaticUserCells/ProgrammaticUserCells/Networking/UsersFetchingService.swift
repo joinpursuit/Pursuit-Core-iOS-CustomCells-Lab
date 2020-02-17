@@ -13,7 +13,9 @@ class UsersFetchingService {
                                               andMethod: .get) { (result) in
             switch result {
             case let .success(data):
-                let users = User.getUsers(from: data)
+                let users = 
+                    User.getUsers(from: data)
+               
                 completionHandler(.success(users))
             case let .failure(error):
                 completionHandler(.failure(.other(rawError: error)))
